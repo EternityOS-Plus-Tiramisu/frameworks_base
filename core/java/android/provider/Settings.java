@@ -5552,6 +5552,36 @@ public final class Settings {
         public static final String GLOBAL_ACTIONS_LIST = "global_actions_list";
 
         /**
+         * Whether or not volume button music controls should be enabled to seek media tracks
+         * @hide
+         */
+        public static final String VOLBTN_MUSIC_CONTROLS = "volbtn_music_controls";
+
+        /**
+         * Volume panel on left
+         * @hide
+         */
+        public static final String VOLUME_PANEL_ON_LEFT = "volume_panel_on_left";
+
+        /**
+         * Whether to always show settings in volume dialog, ignoring bluetooth state
+         * @hide
+         */
+        public static final String VOLUME_DIALOG_FORCE_SHOW_SETTINGS = "volume_dialog_force_show_settings";
+
+        /**
+         * Wheter to show network traffic indicator in statusbar
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
+
+        /**
+         * Network traffic inactivity threshold
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
