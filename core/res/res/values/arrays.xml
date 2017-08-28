@@ -206,5 +206,4 @@
          This is used to differentiate between removable eUICCs and built in eUICCs, and should
          be set by OEMs for devices which use eUICCs. -->
     <integer-array name="non_removable_euicc_slots"></integer-array>
-
 </resources>
