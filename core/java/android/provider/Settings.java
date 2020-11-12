@@ -5559,11 +5559,16 @@ public final class Settings {
          */
 
         /**
-         *  Toggle the wallpaper zoom effects
-         *  0 = 0ff, 1 = on
+         * reTicker Status
          * @hide
          */
-        public static final String DISPLAY_SETTINGS_WALLPAPER_ZOOM = "display_settings_wallpaper_zoom";
+        public static final String RETICKER_STATUS = "reticker_status";
+
+        /**
+         * reTicker Colored
+         * @hide
+         */
+        public static final String RETICKER_COLORED = "reticker_colored";
 
         /**
          * Keys we no longer back up under the current schema, but want to continue to
