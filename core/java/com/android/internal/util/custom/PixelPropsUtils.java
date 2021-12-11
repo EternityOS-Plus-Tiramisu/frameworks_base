@@ -138,6 +138,9 @@ public class PixelPropsUtils {
     private static final Map<String, Object> propsToChangeMI11;
     private static final String[] packagesToChangeMI11 = {
             "com.mobile.legends"
+            "com.netease.lztgglobal",
+            "com.epicgames.fortnite",
+            "com.epicgames.portal"
     };
 
     private static ArrayList<String> allProps = new ArrayList<>(Arrays.asList("BRAND", "MANUFACTURER", "DEVICE", "PRODUCT", "MODEL", "FINGERPRINT"));
@@ -237,11 +240,16 @@ public class PixelPropsUtils {
                 setPropValue(key, value);
             }
         }
+
         if (isPixelDevice){
             if (packageName.equals(PACKAGE_GMS) &&
                     processName.equals(PACKAGE_GMS + ".unstable")){
                 setPropValue("MODEL", Build.MODEL + " ");
             }
+        if (sIsGms) {
+                setPropValue("FINGERPRINT", "google/angler/angler:6.0/MDB08L/2343525:user/release-keys");
+                setPropValue("MODEL", "angler");
+
         } else {
             if (Arrays.asList(packagesToChangeROG1).contains(packageName)) {
                 if (DEBUG) Log.d(TAG, "Defining props for: " + packageName);
