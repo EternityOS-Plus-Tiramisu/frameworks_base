@@ -76,6 +76,38 @@ public class PixelPropsUtils {
 	    "com.google.android.gm"
     };
 
+    private static final Map<String, Object> propsToChangeROG1;
+    private static final String[] packagesToChangeROG1 = {
+            "com.dts.freefireth",
+            "com.dts.freefiremax",
+            "com.madfingergames.legends"
+    };
+
+    private static final Map<String, Object> propsToChangeXP5;
+    private static final String[] packagesToChangeXP5 = {
+            "com.activision.callofduty.shooter",
+            "com.tencent.tmgp.kr.codm",
+            "com.garena.game.codm",
+            "com.vng.codmvn"
+    };
+
+    private static final Map<String, Object> propsToChangeOP8P;
+    private static final String[] packagesToChangeOP8P = {
+            "com.tencent.ig",
+            "com.pubg.imobile",
+            "com.pubg.krmobile",
+            "com.pubg.newstate",
+            "com.vng.pubgmobile",
+            "com.rekoo.pubgm",
+            "com.tencent.tmgp.pubgmhd",
+            "com.riotgames.league.wildrift",
+            "com.riotgames.league.wildrifttw",
+            "com.riotgames.league.wildriftvn",
+            "com.netease.lztgglobal",
+            "com.epicgames.fortnite",
+            "com.epicgames.portal"
+    };
+
     private static final String[] packagesToKeep = {
         "com.google.android.GoogleCamera",
         "com.google.android.GoogleCamera.Cameight",
@@ -176,12 +208,6 @@ public class PixelPropsUtils {
         propsToChangeOP8P = new HashMap<>();
         propsToChangeOP8P.put("MODEL", "IN2020");
         propsToChangeOP8P.put("MANUFACTURER", "OnePlus");
-        propsToChangeMI11 = new HashMap<>();
-        propsToChangeMI11.put("BRAND", "Xiaomi");
-        propsToChangeMI11.put("MANUFACTURER", "Xiaomi");
-        propsToChangeMI11.put("DEVICE", "star");
-        propsToChangeMI11.put("PRODUCT", "star");
-        propsToChangeMI11.put("MODEL", "M2102K1G");
     }
 
     public static void setProps(Application app) {
@@ -206,6 +232,18 @@ public class PixelPropsUtils {
 
             if (Arrays.asList(packagesToChangePixelXL).contains(packageName)) {
                 propsToChange = propsToChangePixelXL;
+            }
+
+            if (Arrays.asList(packagesToChangeROG1).contains(packageName)) {
+                propsToChange.putAll(propsToChangeROG1);
+            }
+
+            if (Arrays.asList(packagesToChangeXP5).contains(packageName)) {
+                propsToChange.putAll(propsToChangeXP5);
+            }
+
+            if (Arrays.asList(packagesToChangeOP8P).contains(packageName)) {
+                propsToChange.putAll(propsToChangeOP8P);
             }
 
             if (DEBUG) Log.d(TAG, "Defining props for: " + packageName);
