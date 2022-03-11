@@ -58,6 +58,7 @@ public class PixelPropsUtils {
             "com.android.chrome",
             "com.android.vending",
             "com.breel.wallpapers20",
+	    "com.snapchat.android",
             "com.amazon.avod.thirdpartyclient",
             "com.disney.disneyplus",
             "com.netflix.mediaclient",
