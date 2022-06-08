@@ -39,7 +39,6 @@ public class PixelPropsUtils {
     private static final String[] packagesToChangePixel5 = {
             "com.android.vending",
             "com.google.android.apps.photos",
-            "com.google.android.apps.recorder",
             "com.google.android.apps.turbo",
             "com.google.android.apps.turboadapter",
             "com.google.android.dialer",
@@ -90,7 +89,8 @@ public class PixelPropsUtils {
         "com.google.android.UltraCVM",
         "com.google.android.apps.cameralite",
         "com.google.android.apps.wearables.maestro.companion",
-        "com.google.ar.core"
+        "com.google.ar.core",
+        "com.google.android.apps.recorder"
     };
 
     // Codenames for currently supported Pixels by Google
