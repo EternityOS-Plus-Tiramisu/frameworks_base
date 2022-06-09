@@ -102,9 +102,7 @@ public class PixelPropsUtils {
             "bramble",
             "sunfish",
             "coral",
-            "flame",
-            "bonito",
-            "sargo"
+            "flame"
     };
 
     private static final Map<String, Object> propsToChangeROG1;
