@@ -4,5 +4,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-
+    <!-- Network traffic -->
+    <dimen name="network_traffic_width">25sp</dimen>
 </resources>
