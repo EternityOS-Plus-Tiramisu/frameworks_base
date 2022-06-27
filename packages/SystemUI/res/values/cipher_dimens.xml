@@ -11,6 +11,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <resources>
     <!-- Bolt Battery Icon -->
     <dimen name="status_bar_battery_bolt_icon_height">13.5dp</dimen>
