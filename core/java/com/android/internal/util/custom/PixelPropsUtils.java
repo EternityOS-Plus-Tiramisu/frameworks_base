@@ -138,9 +138,6 @@ public class PixelPropsUtils {
     private static final Map<String, Object> propsToChangeMI11;
     private static final String[] packagesToChangeMI11 = {
             "com.mobile.legends"
-            "com.netease.lztgglobal",
-            "com.epicgames.fortnite",
-            "com.epicgames.portal"
     };
 
     private static ArrayList<String> allProps = new ArrayList<>(Arrays.asList("BRAND", "MANUFACTURER", "DEVICE", "PRODUCT", "MODEL", "FINGERPRINT"));
@@ -187,27 +184,10 @@ public class PixelPropsUtils {
         propsToChangeMI11.put("MODEL", "M2102K1G");
     }
 
-    private static void setPropsForSamsung(String packageName) {
-        for (Map.Entry<String, Object> prop : propsToChangePixel6.entrySet()) {
-            String key = prop.getKey();
-            Object value = prop.getValue();
-            if (propsToKeep.containsKey(packageName) && propsToKeep.get(packageName).contains(key)) {
-                if (DEBUG) Log.d(TAG, "Not defining " + key + " prop for: " + packageName);
-                continue;
-            }
-            if (DEBUG) Log.d(TAG, "Defining " + key + " prop for: " + packageName);
-            setPropValue(key, value);
-        }
-    }
-
     public static void setProps(Application app) {
         final String packageName = app.getPackageName();
         final String processName = app.getProcessName();
         if (packageName == null) {
-            return;
-        }
-        if (packageName.startsWith("com.samsung.android.")){
-            setPropsForSamsung(packageName);
             return;
         }
         if (packageName.equals(PACKAGE_GMS) &&
@@ -240,16 +220,11 @@ public class PixelPropsUtils {
                 setPropValue(key, value);
             }
         }
-
         if (isPixelDevice){
             if (packageName.equals(PACKAGE_GMS) &&
                     processName.equals(PACKAGE_GMS + ".unstable")){
                 setPropValue("MODEL", Build.MODEL + " ");
             }
-        if (sIsGms) {
-                setPropValue("FINGERPRINT", "google/angler/angler:6.0/MDB08L/2343525:user/release-keys");
-                setPropValue("MODEL", "angler");
-
         } else {
             if (Arrays.asList(packagesToChangeROG1).contains(packageName)) {
                 if (DEBUG) Log.d(TAG, "Defining props for: " + packageName);
@@ -310,5 +285,4 @@ public class PixelPropsUtils {
             throw new UnsupportedOperationException();
         }
     }
-  }
 }
