@@ -310,4 +310,5 @@ public class PixelPropsUtils {
             throw new UnsupportedOperationException();
         }
     }
+  }
 }
