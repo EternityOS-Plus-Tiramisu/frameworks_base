@@ -141,41 +141,6 @@ public class PixelPropsUtils {
             "flame"
     };
 
-    private static final Map<String, Object> propsToChangeROG1;
-    private static final String[] packagesToChangeROG1 = {
-            "com.dts.freefireth",
-            "com.dts.freefiremax",
-            "com.madfingergames.legends"
-    };
-
-    private static final Map<String, Object> propsToChangeXP5;
-    private static final String[] packagesToChangeXP5 = {
-            "com.activision.callofduty.shooter",
-            "com.tencent.tmgp.kr.codm",
-            "com.garena.game.codm",
-            "com.vng.codmvn"
-    };
-
-    private static final Map<String, Object> propsToChangeOP8P;
-    private static final String[] packagesToChangeOP8P = {
-            "com.tencent.ig",
-            "com.pubg.imobile",
-            "com.pubg.krmobile",
-            "com.pubg.newstate",
-            "com.vng.pubgmobile",
-            "com.rekoo.pubgm",
-            "com.tencent.tmgp.pubgmhd",
-            "com.riotgames.league.wildrift",
-            "com.riotgames.league.wildrifttw",
-            "com.riotgames.league.wildriftvn",
-            "com.netease.lztgglobal"
-    };
-
-    private static final Map<String, Object> propsToChangeMI11;
-    private static final String[] packagesToChangeMI11 = {
-            "com.mobile.legends"
-    };
-
     private static ArrayList<String> allProps = new ArrayList<>(Arrays.asList("BRAND", "MANUFACTURER", "DEVICE", "PRODUCT", "MODEL", "FINGERPRINT"));
 
     private static volatile boolean sIsGms = false;
